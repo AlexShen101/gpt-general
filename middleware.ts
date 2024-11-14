@@ -4,15 +4,16 @@ import type { NextRequest } from 'next/server'
  
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname
+
   const isPublicPath = (path === '/')
 
   // Get the token from cookies
   const token = request.cookies.get('next-auth.session-token')?.value || ''
 
   // Redirect logic
-  if (!isPublicPath && !token) {
-    return NextResponse.redirect(new URL('/', request.url))
-  }
+//   if (!isPublicPath && !token) {
+//     return NextResponse.redirect(new URL('/', request.url))
+//   }
 
   return NextResponse.next()
 }
@@ -20,8 +21,6 @@ export function middleware(request: NextRequest) {
 // Configure which routes to run middleware on
 export const config = {
   matcher: [
-    '/',
-    '/notes-to-cards',
-    '/cards-to-notes',
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ]
 }
