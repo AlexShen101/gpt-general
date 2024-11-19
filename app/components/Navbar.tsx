@@ -29,10 +29,10 @@ export default async function Navbar() {
                   Notes Maker
                 </Link>
                 <Link
-                  href="/flashcard-to-note"
+                  href="/flashcard_maker"
                   className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-300 hover:text-white border-b-2 border-transparent hover:border-gray-300"
                 >
-                  Flashcard to Notes
+                  Flashcard Maker
                 </Link>
               </div>
             )}

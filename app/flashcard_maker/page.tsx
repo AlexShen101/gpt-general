@@ -1,8 +1,11 @@
-// notes to flashcards
+import Converter from '@/app/components/ConversionPage'
+
 export default function NotesToCards() {
   return (
-    <div>
-      <h1>Convert Notes to Flashcards</h1>
-    </div>
+    <Converter
+      title="Convert Notes to Flashcards"
+      type="flashcards"
+      inputPlaceholder="Paste your notes here..."
+    />
   )
 }
