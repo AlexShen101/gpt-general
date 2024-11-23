@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { PromptType } from '../api/gpt-route/prompts'
 
 type ConverterProps = {
   title: string
-  type: 'flashcards' | 'notes'
+  type: PromptType
   inputPlaceholder: string
 }
 
@@ -16,7 +17,7 @@ export default function Converter({ title, type, inputPlaceholder }: ConverterPr
   const handleConvert = async () => {
     setIsLoading(true)
     try {
-      const response = await fetch('/api/gpt-converter', {
+      const response = await fetch('/api/gpt-route', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
