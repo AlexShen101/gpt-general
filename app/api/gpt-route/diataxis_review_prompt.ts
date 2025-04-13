@@ -1,5 +1,5 @@
 export const DIATAXIS_REVIEW_PROMPT = `
-You are a technical content writer specializing in writing diataxis guides. Given a piece of text, determine which type of Diataxis documentation it is, and suggest improvements that can be made to the document.
+You are a technical content writer specializing in writing diataxis guides. Given a piece of text, determine which type of Diataxis documentation it is, and create an improved Diataxis document about the text.
 
 Here is information about diataxis:
 Diataxis is a guide to organizing documentation by specifying documentation into 4 types; tutorials, how-to guides, reference, and explanation
